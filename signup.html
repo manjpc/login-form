@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>User Login & Sign Up</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="form-container">
+           
+            <form id="signup-form">
+                <h2>Sign Up</h2>
+                <input type="text" id="signup-firstname" placeholder="First Name" required>
+                <input type="text" id="signup-lastname" placeholder="Last Name" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <div class="password-container">
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <span id="show-signup-password" class="password-icon" onclick="togglePasswordVisibility('signup-password')">👁️</span>
+                </div>
+                <input type="text" id="signup-address" placeholder="Address" required>
+                <input type="tel" id="signup-phone" placeholder="Phone" required>
+                <input type="file" id="image-upload" accept="image/*" required>
+                <button type="button" onclick="captureImage()">Picture through Camera Option
+                </button>
+                <video id="camera" autoplay class="size"></video>
+                <button id="captureButton">Capture Image</button>
+                <canvas id="canvas" style="display: none;"></canvas>
+                <img id="capturedImage" alt="Captured Image" style="display: none;">
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="./login.html" onclick="showLoginForm()">Login</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
